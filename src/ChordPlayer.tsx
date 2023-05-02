@@ -1,13 +1,11 @@
 import { Button } from '@chakra-ui/react';
-import { transpose, note, Chord } from 'tonal';
-
 import { Howl } from 'howler';
+import { Chord, note, transpose } from 'tonal';
 import sounds from './pianosprite.mp3';
 
-const ChordPlayer = ({ chord, chords, startNote }: any) => {
+const ChordPlayer = ({ chord, startNote }: any) => {
     const playChord = () => {
         const chordIntervals = Chord.get(chord).intervals;
-        console.log('ChordType.get(chord)', Chord.get(chord));
         const chordNotes = chordIntervals.map((interval) =>
             transpose(startNote + '1', interval)
         );
@@ -25,24 +23,17 @@ const ChordPlayer = ({ chord, chords, startNote }: any) => {
         const sound = new Howl({
             src: [sounds],
             sprite: { ...generateNotes() },
-            onload() {
-                console.log('sound loaded');
-                soundEngine.init();
-            },
             onloaderror() {},
         });
 
         const soundEngine = {
-            init() {
-                // sound.play('34');
-            },
             play(chordNotes: string[]) {
                 const chordMidiNumbers = chordNotes.map(
                     (noteName) => note(noteName).midi
                 );
-                chordMidiNumbers.forEach((noteMidiNumber) =>
-                    //@ts-ignore
-                    sound.play(noteMidiNumber.toString())
+                chordMidiNumbers.forEach(
+                    (noteMidiNumber) =>
+                        noteMidiNumber && sound.play(noteMidiNumber.toString())
                 );
             },
         };
