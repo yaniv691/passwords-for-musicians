@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/passwords-for-musicians/static/css/main.4a9da459.css",
-    "main.js": "/passwords-for-musicians/static/js/main.0091b7f0.js",
+    "main.css": "/passwords-for-musicians/static/css/main.43337a98.css",
+    "main.js": "/passwords-for-musicians/static/js/main.bfe360cb.js",
     "static/js/787.91a1e2b7.chunk.js": "/passwords-for-musicians/static/js/787.91a1e2b7.chunk.js",
     "static/media/pianosprite.mp3": "/passwords-for-musicians/static/media/pianosprite.151ac7330b48307f4a74.mp3",
     "index.html": "/passwords-for-musicians/index.html",
-    "main.4a9da459.css.map": "/passwords-for-musicians/static/css/main.4a9da459.css.map",
-    "main.0091b7f0.js.map": "/passwords-for-musicians/static/js/main.0091b7f0.js.map",
+    "main.43337a98.css.map": "/passwords-for-musicians/static/css/main.43337a98.css.map",
+    "main.bfe360cb.js.map": "/passwords-for-musicians/static/js/main.bfe360cb.js.map",
     "787.91a1e2b7.chunk.js.map": "/passwords-for-musicians/static/js/787.91a1e2b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a9da459.css",
-    "static/js/main.0091b7f0.js"
+    "static/css/main.43337a98.css",
+    "static/js/main.bfe360cb.js"
   ]
 }
